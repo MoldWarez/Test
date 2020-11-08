@@ -1,0 +1,143 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToVK Test</title>
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="module" src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class = "main">
+
+    <!--left pane start-->
+    <div class = "subDivLeft">
+      <div class = "subDivTitle">
+        <div class = "helper">
+          Tournament of Virtual Kombat
+        </div>
+      </div>
+
+      <div id="toc_container">
+        <ul class="toc_list">
+          <li><a href="#kombatant1">Kombatant 1</a></li>
+          <li><a href="#kombatant2">Kombatant 2</a></li>
+          <li><a href="#kombatant3">Kombatant 3</a></li>
+          <li><a href="#kombatant4">Kombatant 4</a></li>
+          <li><a href="#kombatant5">Kombatant 5</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- left pane end-->
+
+    <!--empty-->
+    <div class = "subDiv">
+      <div style="height:150px"></div>
+    </div>
+    <!--empty-->
+
+    <!--chart 1 start-->
+    <div class = "subDiv scrollFade" id = "kombatant1">
+      <div class = "subDivTitle">
+        <div class = "helper">
+          Kombatant 1
+        </div>
+      </div>
+      <div class = "subDivHoriz">
+        <div class = "graph" id = "chart1"></div>
+        <div class = "subDivElement"><iframe src="https://www.youtube.com/embed/_CTWKdkLwqA" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+    <!--chart 1 end-->
+
+    <!--chart 2 start-->
+    <div class = "subDiv scrollFade" id = "kombatant2">
+      <div class = "subDivTitle">
+        <div class = "helper">
+          Kombatant 2
+        </div>
+      </div>
+      <div class = "subDivHoriz">
+        <div class = "graph" id = "chart2"></div>
+        <div class = "subDivElement"><iframe src="https://www.youtube.com/embed/ZII-wmzjgqs" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+    <!--chart 2 end-->
+
+    <!--chart 3 start-->
+    <div class = "subDiv scrollFade" id = "kombatant3">
+      <div class = "subDivTitle">
+        <div class = "helper">
+          Kombatant 3
+        </div>
+      </div>
+      <div class = "subDivHoriz">
+        <div class = "graph" id = "chart3"></div>
+        <div class = "subDivElement"><iframe src="https://www.youtube.com/embed/CiZ3XtGtmQs" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+    <!--chart 3 end-->
+
+    <!--chart 4 start-->
+    <div class = "subDiv scrollFade" id = "kombatant4">
+      <div class = "subDivTitle">
+        <div class = "helper">
+          Kombatant 4
+        </div>
+      </div>
+      <div class = "subDivHoriz">
+        <div class = "graph" id = "chart4"></div>
+        <div class = "subDivElement"><iframe src="https://www.youtube.com/embed/GRtWNZwgGn8" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+    <!--chart 4 end-->
+
+    <!--chart 5 start-->
+    <div class = "subDiv scrollFade" id = "kombatant5">
+      <div class = "subDivTitle">
+        <div class = "helper">
+          Kombatant 5
+        </div>
+      </div>
+      <div class = "subDivHoriz">
+        <div class = "graph" id = "chart5"></div>
+        <div class = "subDivElement"><iframe src="https://www.youtube.com/embed/imryFZr2AYA" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+    <!--chart 5 end-->
+
+    <!--empty-->
+    <div class = "subDiv">
+    <div style="height:300px"></div>
+    </div>
+    <!--empty-->
+  </div>
+
+  <script type="text/javascript">
+    var window_height = $(window).height();
+    $(window).scroll(function() {
+      var scrollMiddle = $(window).scrollTop() + (window_height/2);
+      $('.scrollFade').each(function() {
+        elTop = $(this).offset().top;
+        elBtm = elTop + $(this).height();
+        if (elTop < scrollMiddle) {
+          $(this).css('opacity', 1);
+        } else {
+          $(this).css('opacity', 0.6);
+        }
+      });
+    });
+
+    $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 15
+    }, 100);
+    });
+  </script>
+
+</body>
+</html>

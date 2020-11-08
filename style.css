@@ -1,0 +1,92 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+padding: 0;
+margin: 0;
+background-color: 0;
+color: #fff;
+}
+
+.main {
+    margin: 15px;
+}
+
+.subDiv {
+margin: auto auto 2em auto;
+width: 60%;
+border: 3px solid green;
+}
+
+.subDivLeft {
+width: 10%;
+border: 3px solid green;
+position: fixed;
+}
+
+.subDivHoriz {
+padding: 30px;
+display: flex;
+}
+
+.insetWrap {
+    padding: 15px;
+}
+
+.subDivTitle {
+height: 40px;
+width: 100%;
+text-align: center;
+background-color: green;
+display: flex;
+}
+
+.helper {
+margin: auto auto;
+}
+
+.subDivElement {
+width: 100%;
+}
+
+.graph {
+margin-right: 2em;
+}
+
+.subDivElement iframe {
+width: inherit;
+height:100%;
+}
+
+#toc_container {
+display: table;
+font-size: 75%;
+padding: 5px;
+width: auto;
+display: inline;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+list-style: outside none none !important;
+margin: 5px;
+padding: 7px;
+text-align: center;
+}
+
+#toc_container li {
+    background-color: green;
+    margin:auto;
+}
+
+a:link{
+    color: #fff;
+}
+
+a:visited{
+    color: #fff;
+}
+
+#toc_container li:hover {
+    background-color: black;
+}
